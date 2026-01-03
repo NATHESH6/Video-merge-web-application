@@ -14,8 +14,9 @@ A full-stack video merging web app built by **Nathesh**, final year CSE and free
 - Frontend: HTML, CSS, JavaScript
 - Backend: Python (Flask)
 - Media engine: FFmpeg
-```
+
 ## Project structure
+```
 video-merge-app/
 ├── app.py
 ├── requirements.txt
