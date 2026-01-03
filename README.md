@@ -16,7 +16,37 @@ A full-stack video merging web app built by **Nathesh**, final year CSE and free
 - Media engine: FFmpeg
 
 ## Project structure
-See `/video-merge-app` tree in this repo.
+---
+video-merge-app/
+├── app.py
+├── requirements.txt
+├── config.py
+├── merge_worker.py
+├── tasks/
+│   └── queue.py
+├── static/
+│   ├── css/
+│   │   ├── main.css
+│   │   └── themes.css
+│   ├── js/
+│   │   ├── ui.js
+│   │   ├── dashboard.js
+│   │   └── theme.js
+│   └── assets/
+│       └── icons/
+├── templates/
+│   ├── index.html
+│   ├── dashboard.html
+│   └── download.html
+├── uploads/
+│   ├── videos/
+│   ├── audio/
+│   └── subs/
+├── outputs/
+│   └── merged/
+├── README.md
+└── LICENSE
+---
 
 ## Setup
 1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
@@ -37,8 +67,6 @@ See `/video-merge-app` tree in this repo.
 
 ## License
 MIT License — see `LICENSE`. © Nathesh
-MIT License
-
 Copyright (c) 2026 Nathesh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
