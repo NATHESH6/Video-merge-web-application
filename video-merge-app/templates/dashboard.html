@@ -1,0 +1,42 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Merge Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+</head>
+<body>
+  <header class="app-header">
+    <h2>Processing</h2>
+  </header>
+
+  <main class="card slide-up">
+    <div class="progress-wrap">
+      <div class="progress-bar">
+        <div id="progressInner" class="progress-inner"></div>
+      </div>
+      <div id="progressText" class="progress-text">Starting…</div>
+    </div>
+
+    <div class="stages">
+      <div class="stage-dot active" id="stage-queue">Queued</div>
+      <div class="stage-dot" id="stage-run">Merging</div>
+      <div class="stage-dot" id="stage-done">Completed</div>
+    </div>
+
+    <div class="actions">
+      <a id="downloadLink" class="btn success hover-glow hidden">Download result</a>
+        <br>
+      <a href="{{ url_for('index') }}" class="btn ghost hover-bounce">New merge</a>
+    </div>
+  </main>
+
+  <script>
+    const taskId = "{{ task_id }}";
+  </script>
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>

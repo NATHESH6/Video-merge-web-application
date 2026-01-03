@@ -1,0 +1,50 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Merge</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="brand">MergeLab</h1>
+    <button id="themeToggle" class="btn ghost">Toggle Theme</button>
+  </header>
+
+  <main class="card fade-in">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <div class="field">
+        <label>Videos</label>
+        <input type="file" name="videos" multiple accept="video/*" />
+      </div>
+      <div class="field">
+        <label>Extra Audio (optional)</label>
+        <input type="file" name="audios" multiple accept="audio/*" />
+      </div>
+      <div class="field">
+        <label>Subtitles (optional)</label>
+        <input type="file" name="subs" multiple accept=".srt,.ass,.vtt" />
+      </div>
+      <div class="row">
+        <label class="switch">
+          <input type="checkbox" name="reencode" />
+          <span class="slider"></span>
+          <span class="switch-label">Force re-encode (fix mismatched codecs)</span>
+        </label>
+      </div>
+      <div class="field">
+        <label>Output filename</label>
+        <input type="text" name="out_name" placeholder="merged_output.mp4" />
+      </div>
+      <button type="submit" class="btn primary hover-bounce">Merge now</button>
+    </form>
+
+    <div id="status" class="status hidden"></div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="brand">MergeLab</h1>
+    <button id="themeToggle" class="btn ghost">Toggle Theme</button>
+  </header>
+
+  <main class="card slide-up">
+    <h2>🎉 Merge Completed!</h2>
+    <p>Your video has been successfully merged. Click below to download:</p>
+
+    <div class="actions" style="margin-top:20px;">
+      <a href="{{ url_for('download', task_id=task_id) }}" class="btn success hover-glow">Download Video</a>
+      <a href="{{ url_for('index') }}" class="btn ghost hover-bounce">Start New Merge</a>
+    </div>
+
+    <div class="celebration" style="margin-top:30px; text-align:center;">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="50" stroke="var(--accent)" stroke-width="6" fill="none" />
+        <polyline points="40,65 55,80 85,45" stroke="var(--accent-2)" stroke-width="6" fill="none" />
+      </svg>
+      <p style="margin-top:12px;">Enjoy your merged video!</p>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>

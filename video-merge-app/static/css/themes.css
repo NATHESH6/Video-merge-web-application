@@ -1,0 +1,49 @@
+/* static/css/themes.css */
+:root {
+  --bg: #0f1216;
+  --card: #171b22;
+  --text: #eaeef4;
+  --accent: #5cc8ff;
+  --accent-2: #8cffc1;
+}
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2430;
+  --accent: #1e75ff;
+  --accent-2: #00c873;
+}
+body { background: var(--bg); color: var(--text); transition: background 300ms, color 300ms; }
+.card { background: var(--card); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+
+/* Buttons */
+.btn { padding: 12px 16px; border-radius: 10px; border: none; cursor: pointer; transition: transform 200ms, box-shadow 200ms, background 200ms; }
+.btn.primary { background: var(--accent); color: #0b0e12; }
+.btn.success { background: var(--accent-2); color: #072012; }
+.btn.ghost { background: transparent; border: 1px solid var(--accent); color: var(--text); }
+
+/* Hover animations */
+.hover-bounce:hover { transform: translateY(-2px) scale(1.02); }
+.hover-glow:hover { box-shadow: 0 0 16px var(--accent); }
+
+/* Progress */
+.progress-bar { width: 100%; height: 12px; background: rgba(255,255,255,.1); border-radius: 8px; overflow: hidden; }
+.progress-inner { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 500ms ease; }
+
+/* Stages */
+.stage-dot { display: inline-block; margin-right: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.08); }
+.stage-dot.active { background: var(--accent); color: #081018; }
+
+/* Entrance animations */
+.fade-in { animation: fade 500ms ease both; }
+.slide-up { animation: slideUp 600ms ease both; }
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: translateY(0) } }
+
+/* Fancy toggle switch */
+.switch { display: inline-flex; align-items: center; gap: 8px; }
+.switch .slider { position: relative; width: 48px; height: 24px; background: rgba(255,255,255,.12); border-radius: 999px; display: inline-block; transition: background 200ms; }
+.switch input { display: none; }
+.switch input:checked + .slider::after { transform: translateX(24px); }
+.switch .slider::after { content: ''; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); position: absolute; top: 1px; left: 1px; transition: transform 200ms; }
+.switch-label { color: var(--text); opacity: .9; }
