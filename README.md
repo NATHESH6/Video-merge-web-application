@@ -16,7 +16,6 @@ A full-stack video merging web app built by **Nathesh**, final year CSE and free
 - Media engine: FFmpeg
 
 ## Project structure
----
 video-merge-app/
 ├── app.py
 ├── requirements.txt
@@ -46,7 +45,7 @@ video-merge-app/
 │   └── merged/
 ├── README.md
 └── LICENSE
----
+
 
 ## Setup
 1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
