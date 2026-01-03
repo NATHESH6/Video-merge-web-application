@@ -66,7 +66,7 @@ video-merge-app/
 - For production, use Gunicorn + Nginx and a worker queue (Celery/RQ).
 
 ## License
-MIT License — see `LICENSE`. © Nathesh
+MIT License — see `LICENSE`. © Nathesh<br>
 Copyright (c) 2026 Nathesh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
