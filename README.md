@@ -12,20 +12,8 @@ This project is a video merge web application designed to simplify the process o
 - Attach multiple audio tracks and optional subtitles (SRT/ASS/VTT)
 - Live dashboard with progress and stages
 - Download final merged file
-## 🌟 Advantages
-- Fast merging: Videos with matching codecs are merged instantly using stream copy.
 
-- Multi-audio support: Attach multiple audio tracks to the final video.
 
-- Subtitle support: Add subtitles in SRT, ASS, or VTT formats.
-
-- Real-time dashboard: Track progress and stages visually.
-
-- Animated UI: Smooth transitions, hover effects, and celebratory success animations.
-
-- Dark/Light mode: Switch themes easily to suit user preference.
-
-- Simple workflow: Upload → Merge → Download in just a few steps.
 ## Tech stack
 - Frontend: HTML, CSS, JavaScript
 - Backend: Python (Flask)
