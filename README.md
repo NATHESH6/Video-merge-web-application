@@ -12,7 +12,20 @@ This project is a video merge web application designed to simplify the process o
 - Attach multiple audio tracks and optional subtitles (SRT/ASS/VTT)
 - Live dashboard with progress and stages
 - Download final merged file
+## 🌟 Advantages
+- Fast merging: Videos with matching codecs are merged instantly using stream copy.
 
+- Multi-audio support: Attach multiple audio tracks to the final video.
+
+- Subtitle support: Add subtitles in SRT, ASS, or VTT formats.
+
+- Real-time dashboard: Track progress and stages visually.
+
+- Animated UI: Smooth transitions, hover effects, and celebratory success animations.
+
+- Dark/Light mode: Switch themes easily to suit user preference.
+
+- Simple workflow: Upload → Merge → Download in just a few steps.
 ## Tech stack
 - Frontend: HTML, CSS, JavaScript
 - Backend: Python (Flask)
@@ -50,7 +63,11 @@ video-merge-app/
 ├── README.md
 └── LICENSE
 ```
-
+## Setup
+1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
+2. `python -m venv .venv && source .venv/bin/activate` (Windows: `.venv\Scripts\activate`)
+3. `pip install -r requirements.txt`
+4. `python app.py` (development)
 ## 🛠️ How to Use
 ### 1.Run the application locally
 ```
@@ -65,15 +82,8 @@ Then open http://localhost:5000 in your browser.<br>
 ### 3.Monitor progress
    - A dashboard displays the merge status with a progress bar and stage indicators (Queued → Merging → Completed).
     - Updates are shown live until the process finishes.<br>
-
 ### 4.Download result
    - Once merging is complete, click the Download Video button to save the merged file to your PC.
-## Setup
-1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
-2. `python -m venv .venv && source .venv/bin/activate` (Windows: `.venv\Scripts\activate`)
-3. `pip install -r requirements.txt`
-4. `python app.py` (development)
-
 ## Usage
 - Open `http://localhost:5000`
 - Upload videos (same codec for fastest merging), optional audios/subtitles
@@ -84,11 +94,31 @@ Then open http://localhost:5000 in your browser.<br>
 - Fastest results when all input videos share the same codec/parameters (e.g., H.264 + AAC, same resolution).
 - Subtitles stored in MP4 as `mov_text`; for MKV, adjust commands to `-c:s copy`.
 - For production, use Gunicorn + Nginx and a worker queue (Celery/RQ).
+## 🎨 User Interface & Theme
+- Dark and Light mode: A toggle button lets users switch between themes.
 
+- Hover animations: Buttons bounce or glow when hovered for interactive feedback.
+
+- Progress bar: Gradient-filled bar shows merge progress dynamically.
+
+- Stage indicators: Highlighted dots show the current stage of processing.
+
+- Success screen: Animated checkmark and message appear when merging is complete.
+
+- Clean design: Minimal, card-based layout ensures clarity and ease of use.
+- 
+
+## 🚀 Example Workflow
+- Open the app and select videos.
+
+- Click Merge Now to start processing.
+
+- Watch progress on the dashboard.
+
+- Download the merged video once complete.
 ## License
 MIT License — see `LICENSE`. © Nathesh<br>
 Copyright (c) 2026 Nathesh
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
