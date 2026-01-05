@@ -52,21 +52,21 @@ video-merge-app/
 ```
 
 ## 🛠️ How to Use
-1 Run the application locally
+### 1.Run the application locally
 ```
 python app.py
 ```
 Then open http://localhost:5000 in your browser.<br>
-2 Upload files
+### 2.Upload files
    - Select one or more video files.
    - Optionally upload audio tracks and subtitle files.
    - Enter a custom output filename if desired.
    - Use the “Force re-encode” option if the input videos have mismatched codecs.<br>
-3 Monitor progress
+### 3.Monitor progress
     - A dashboard displays the merge status with a progress bar and stage indicators (Queued → Merging → Completed).
     - Updates are shown live until the process finishes.<br>
 
-4 Download result
+### 4.Download result
     - Once merging is complete, click the Download Video button to save the merged file to your PC.
 ## Setup
 1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
