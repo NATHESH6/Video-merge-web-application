@@ -56,15 +56,15 @@ video-merge-app/
 ```
 python app.py
 ```
-Then open http://localhost:5000 in your browser.
+Then open http://localhost:5000 in your browser.<br>
 2 Upload files
    - Select one or more video files.
    - Optionally upload audio tracks and subtitle files.
    - Enter a custom output filename if desired.
-   - Use the “Force re-encode” option if the input videos have mismatched codecs.
+   - Use the “Force re-encode” option if the input videos have mismatched codecs.<br>
 3 Monitor progress
     - A dashboard displays the merge status with a progress bar and stage indicators (Queued → Merging → Completed).
-    - Updates are shown live until the process finishes.
+    - Updates are shown live until the process finishes.<br>
 
 4 Download result
     - Once merging is complete, click the Download Video button to save the merged file to your PC.
