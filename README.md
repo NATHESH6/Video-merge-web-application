@@ -1,6 +1,6 @@
 # MergeLab — Fast animated video merging (Flask)
 
-###🎬 Video Merge Web Application
+## 🎬 Video Merge Web Application
 📌 Project Purpose
 This project is a video merge web application designed to simplify the process of combining multiple video files into one. It allows users to upload videos, add extra audio tracks and subtitles, monitor the merging process in real time, and download the final output directly to their PC.
 
@@ -51,26 +51,23 @@ video-merge-app/
 └── LICENSE
 ```
 
-##🛠️ How to Use
-
-
-- Run the application locally
+## 🛠️ How to Use
+1 Run the application locally
 ```
 python app.py
 ```
 Then open http://localhost:5000 in your browser.
-- Upload files
-   Select one or more video files.
-   Optionally upload audio tracks and subtitle files.
-   Enter a custom output filename if desired.
-   Use the “Force re-encode” option if the input videos have mismatched codecs.
-- Monitor progress
+2 Upload files
+   - Select one or more video files.
+   - Optionally upload audio tracks and subtitle files.
+   - Enter a custom output filename if desired.
+   - Use the “Force re-encode” option if the input videos have mismatched codecs.
+3 Monitor progress
+    - A dashboard displays the merge status with a progress bar and stage indicators (Queued → Merging → Completed).
+    - Updates are shown live until the process finishes.
 
-    A dashboard displays the merge status with a progress bar and stage indicators (Queued → Merging → Completed).
-    Updates are shown live until the process finishes.
-
-- Download result
-    Once merging is complete, click the Download Video button to save the merged file to your PC.
+4 Download result
+    - Once merging is complete, click the Download Video button to save the merged file to your PC.
 ## Setup
 1. Install Python 3.10+ and FFmpeg (ensure `ffmpeg`/`ffprobe` on PATH).
 2. `python -m venv .venv && source .venv/bin/activate` (Windows: `.venv\Scripts\activate`)
